@@ -87,6 +87,7 @@ fn main() {
             Cell::new(alert.labels.instance),
             match alert.state.as_str() {
                 "firing" => Cell::new(alert.state).fg(Color::Red),
+                "pending" => Cell::new(alert.state).fg(Color::Yellow),
                 _ => Cell::new(alert.state),
             },
             Cell::new(alert.labels.alertname),
