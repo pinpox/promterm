@@ -23,7 +23,7 @@
         };
 
         defaultApp = utils.lib.mkApp {
-          drv = self.defaultPackage."${system}";
+          drv = self.defaultPackage."${system}".promterm;
         };
 
         devShell = with pkgs; mkShell {
