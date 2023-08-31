@@ -33,7 +33,7 @@ pub struct Alert {
 pub struct Labels {
     pub alertname: String,
     pub instance: String,
-    pub job: String,
+    pub job: Option<String>,
     pub name: Option<String>,
     pub state: Option<String>,
     #[serde(rename = "type")]
